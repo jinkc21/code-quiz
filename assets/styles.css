@@ -1,5 +1,11 @@
 body {
- 
+ border: 1px solid black;
+}
+
+#quiz {
+    border: 1pz solid black;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
