@@ -12,10 +12,15 @@
 <body>
     <header id="header">
         <h1>Code Quiz</h1>
-        <div id="score">High Score:</div>
-        <div id="timer"> </div>
+        <div>High Score: <span id="high-score"></span></div>
+
+
     </header>
     <div class="container">
+        <div id="quiz-header" class="hide">
+            <div><span>Your Score: <span id="score">0</span></span></div>
+            <div id="timer"></div>
+        </div>
         <div id="question-container" class="hide">
             <div id="question">Question</div>
             <div id="answer-btns" class="btn-grid">
@@ -27,19 +32,14 @@
         </div>
         <div class="controls">
             <button id="start-btn" class="start-btn btn">Start Quiz</button>
+            
             <button id="next-btn" class="next-btn btn hide">Next</button>
-
         </div>
-
-
-        <!-- <section id="main">
-
-            <button id="startBtn">Start Quiz</button>
-            <div id="results"></div>
-        </section>
-        <section id="quiz">
-        </section> -->
-
+        <div id="results" class="hide">
+            <button id="submit-btn" class="submit-btn btn">Submit</button>
+            <div id="total-score-container">Total Score:<span id="total-score"></span></div>
+            <span>Enter Initials</span><input id="input-initials" type="text" maxlength="2">
+        </div>
     </div>
     <script src="./assets/script.js"></script>
 </body>
