@@ -1,94 +1,65 @@
-
-## User Story
-
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
-
-## Acceptance Criteria
-
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and my score
-```
-
-ToDo: 
--fix point system
--update timer to subtract seconds
--log scores and initials to local storage
--style page better
--remove ability to click other buttons after answering
--
-
-
-
-
-
 # w4c-code-quiz
-Code Quiz - Javascript
 
-
-
+Code Quiz - Javascript Edition
 
 
 ## Description
+This is a quiz application for coding which involves Javascript questions. The quiz is timed and scores are saved.
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Browser with local storage is required.
+
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+![Main](assets/main-screenshot.png)
+When the quiz is started using the start button, a timer initiates while questions and answers are revealed.
+![Questions](assets/questions-screenshot.png)
+If an incorrect answer is selected, time is subtracted from the timer. 
+![Incorrect](assets/incorrect-screenshot.png)
+If a correct answer is selected, points are added to the score. 
+![Correct](assets/correct-screenshot.png)
+The quiz ends when the time runs out or all questions are answered. When the quiz is over, users can enter their initials and submit their score. The score and initials are stored in local storage and high scores are displayed.
+![Submit](assets/submit-screenshot.png)
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
 
 ## Credits
 
 Quiz template and tutorial was provided by Web Dev Simplified on YouTube:
 https://www.youtube.com/watch?v=riDzcEQbX6k
 
-MDM Web Docs helped provide information to create the timer function:
+MDM Web Docs helped provide information to create the timer function and store data:
 https://developer.mozilla.org/en-US/docs/Web/API/setInterval
 https://developer.mozilla.org/en-US/docs/Web/API/clearInterval
-
+https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
 
 Quiz questions were provided by Laurence Svekis on LinkedIn:
 https://www.linkedin.com/pulse/ultimate-javascript-quiz-over-200-questions-test-your-svekis--eilzc/
 
+
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+MIT License
 
+Copyright (c) 2024 jinkc21
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ---

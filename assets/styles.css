@@ -76,6 +76,7 @@ body.incorrect {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px;
+    margin: 10px 0;
 }
 
 .controls {
@@ -93,7 +94,7 @@ body.incorrect {
     display: block;
     position: fixed;
     top: 10px;
- }
+}
 
 #high-score-container {
     position: fixed;
