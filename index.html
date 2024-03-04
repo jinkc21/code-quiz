@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Code Quiz</title>
     <link rel="stylesheet" href="./assets/styles.css">
 </head>
@@ -12,7 +11,8 @@
 <body>
     <header id="header">
         <h1>Code Quiz</h1>
-        <div>High Score: <span id="high-score"></span></div>
+        <h2>Javascript Edition</h2>
+        <div id="high-score-container"><button>High Score:</button><span id="high-score"></span></div>
 
 
     </header>
@@ -38,7 +38,7 @@
         <div id="results" class="hide">
             <button id="submit-btn" class="submit-btn btn">Submit</button>
             <div id="total-score-container">Total Score:<span id="total-score"></span></div>
-            <span>Enter Initials</span><input id="input-initials" type="text" maxlength="2">
+            <span>Enter Initials</span><input id="input-initials" type="text" maxlength="3">
         </div>
     </div>
     <script src="./assets/script.js"></script>

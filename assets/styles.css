@@ -6,9 +6,9 @@
 }
 
 :root {
-    --hue-neutral:900;
-    --hue-incorrect:0;
-    --hue-correct:100;
+    --hue-neutral: 900;
+    --hue-incorrect: 0;
+    --hue-correct: 100;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: hsl(var(--hue),100%, 20%);
+    background-color: hsl(var(--hue), 100%, 20%);
 }
 
 body.correct {
@@ -50,8 +50,8 @@ body.incorrect {
 
 .btn {
     --hue: var(--hue-neutral);
-    background-color: hsl(var(--hue),100%, 80%);
-    border: 1px solid hsl(var(--hue),100%, 50%);
+    background-color: hsl(var(--hue), 100%, 80%);
+    border: 1px solid hsl(var(--hue), 100%, 50%);
     border-radius: 5px;
     padding: 5px, 10px;
     outline: none;
@@ -71,7 +71,8 @@ body.incorrect {
     --hue: var(--hue-incorrect)
 }
 
-.start-btn, .next-btn {
+.start-btn,
+.next-btn {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px;
@@ -89,7 +90,13 @@ body.incorrect {
 
 #header {
     z-index: 1;
-    display: flex;
+    display: block;
     position: fixed;
     top: 10px;
+ }
+
+#high-score-container {
+    position: fixed;
+    left: 20px;
+    top: 20px;
 }

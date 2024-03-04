@@ -1,3 +1,4 @@
+// variables
 const startBtn = document.getElementById("start-btn")
 const nextBtn = document.getElementById("next-btn")
 const submitBtn = document.getElementById("submit-btn")
@@ -9,9 +10,11 @@ const highScore = document.getElementById('high-score')
 const totalScore = document.getElementById('total-score')
 const quizHeader = document.getElementById('quiz-header')
 const results = document.getElementById('results')
+const inputInitials = document.getElementById('input-initials')
 
 
 
+// sets timer
 const timer = document.getElementById("timer");
 var seconds = 100;
 var scoreCount = 0;
@@ -35,6 +38,7 @@ function stopTimer() {
   clearInterval(timeInterval);
 }
 
+// starts quiz
 let shuffledQuestions
 let currentQuestions = 0
 
@@ -77,6 +81,7 @@ function showQuestion(question) {
 function resetState() {
   clearStatusClass(document.body)
   nextBtn.classList.add('hide')
+
   while (answerBtn.firstChild) {
     answerBtn.removeChild(answerBtn.firstChild)
   }
@@ -93,8 +98,9 @@ function selectAnswer(e) {
   })
   for (var i = 0; i < answer.length; i++){
     console.log(answer[i])
+  
 
-  //   if (answer.correct) {
+  //   if (answer.correct === true) {
   //   console.log(answer.text)
   //   button.dataset.correct = answer.correct;
   //   scoreCount += 10;
@@ -136,6 +142,8 @@ function clearStatusClass(element) {
   element.classList.remove('correct');
   element.classList.remove('incorrect');
 }
+
+
 
 const questions = [
   {
