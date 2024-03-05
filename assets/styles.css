@@ -72,7 +72,8 @@ body.incorrect {
 }
 
 .start-btn,
-.next-btn {
+.next-btn,
+.submit-btn {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px;
@@ -100,4 +101,13 @@ body.incorrect {
     position: fixed;
     left: 20px;
     top: 20px;
+}
+
+#results {
+    font-size: large;
+    padding: 2px;
+}
+
+#high-score-container {
+    font-size: larger;
 }

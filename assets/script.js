@@ -15,6 +15,7 @@ const inputInitials = document.getElementById('input-initials')
 const correctBox = document.getElementById('correct-box')
 const incorrectBox = document.getElementById('incorrect-box')
 
+const highScores = JSON.parse(window.localStorage.getItem('highscores') || '[]')
 
 // sets timer
 const timer = document.getElementById("timer");
@@ -148,7 +149,7 @@ function clearStatusClass(element) {
 // renders score
 var totalScore = 0;
 var scoreCount = 0;
-var highScore = localStorage.getItem("High Score");
+var highScore = window.localStorage.getItem("High Score");
 highScoreEl.textContent = highScore
 
 function renderScore() {
@@ -162,17 +163,39 @@ submitBtn.addEventListener('click', submitQuiz)
 function submitQuiz() {
   if (!inputInitials.value) {
     alert("Please enter your initials")
-  } else {
-    var initials = inputInitials.value;
-    var score = totalScore;
-  };
-  localStorage.setItem("User Initials", JSON.stringify(initials));
-  localStorage.setItem("Current Score", JSON.parse(score));
-  if (totalScore > highScore) {
-    localStorage.setItem("High Score", JSON.parse(totalScore));
   }
-  location.reload();
+  else {
+    var initialsScore =
+    {
+      initials: inputInitials.value,
+      score: totalScore
+    }
+
+
+    highScores.push(initialsScore)
+    window.localStorage.setItem("User Initials and Score", JSON.stringify(highScores));
+
+    if (totalScore > highScore) {
+      window.localStorage.setItem("High Score", JSON.parse(totalScore));
+    }
+
+    location.reload();
+
+    //   var initials = inputInitials.value;
+    //   var score = totalScore;
+  };
+  saveScores()
 }
+
+let topScores = document.getElementById("top-scores");
+function saveScores() {
+  for (var i = 0; i < highScores.length; i++) {
+    let li = document.createElement('li')
+    li.innerText = highScores[i].initials + " " + highScores[i].score;
+    topScores.appendChild(li);
+  }
+}
+saveScores()
 
 // array of questions
 const questions = [
