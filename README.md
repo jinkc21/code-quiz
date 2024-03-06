@@ -17,15 +17,15 @@ https://jinkc21.github.io/w4c-code-quiz/
 
 ## Usage
 
-![Main](assets/main-screenshot.png)
+![Main](assets/images/main-screenshot.png)
 When the quiz is started using the start button, a timer initiates while questions and answers are revealed.
-![Questions](assets/questions-screenshot.png)
+![Questions](assets/images/questions-screenshot.png)
 If an incorrect answer is selected, time is subtracted from the timer. 
-![Incorrect](assets/incorrect-screenshot.png)
+![Incorrect](assets/images/incorrect-screenshot.png)
 If a correct answer is selected, points are added to the score. 
-![Correct](assets/correct-screenshot.png)
+![Correct](assets/images/correct-screenshot.png)
 The quiz ends when the time runs out or all questions are answered. When the quiz is over, users can enter their initials and submit their score. The score and initials are stored in local storage and high scores are displayed.
-![Submit](assets/submit-screenshot.png)
+![Submit](assets/images/submit-screenshot.png)
 
 
 ## Credits
